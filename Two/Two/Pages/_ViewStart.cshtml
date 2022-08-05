@@ -1,0 +1,12 @@
+﻿@{
+    var culture = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+    if(culture.Contains("en"))
+    {
+        Layout = "Shared/Layouts/Ltr/Ltr_Layout";
+    }
+    else
+    {
+        Layout = "Shared/Layouts/Rtl/RTL_Layout";
+    }
+}
+

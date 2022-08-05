@@ -1,0 +1,47 @@
+﻿<div class="main-wrapper">
+    <section class="subscription-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="subscribe-content">
+                        <h3 class="text-white">@Resources.SupportMainPage.JoinNews</h3>
+                        <p class="text-white mb-0">@Resources.SupportMainPage.JoinNewsText</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Start Subscribe Form -->
+                    <div id="mc_embed_signup">
+                        <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01" method="get" class="subscription relative">
+                            <input type="email" name="EMAIL" placeholder="@Resources.SupportMainPage.Email" onfocus="this.placeholder = ''" onblur="this.placeholder = '@Resources.SupportMainPage.Email'" required>
+                            @*<div style="position: absolute;">
+                                <input type="text" name="" tabindex="-1" value="">
+                            </div>*@
+                            <button class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">@Resources.SupportMainPage.JoinNews</span></button>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                    <!-- End Subscribe Form -->
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Start footer Area -->
+<footer class="footer-area relative" style="background: url(/pics/f-bg.jpg);">
+    <div class="overlay" style="background: rgba(141, 218, 6, .75);"></div>
+    <div class="container">
+        <div class="footer-content d-flex flex-column align-items-center">
+            <div class="footer-menu">
+                <a asp-page="/Index">@Resources.NavbarButton.MainPage</a>
+                <a asp-page="/Elements">@Resources.NavbarButton.ElementCollectionPage</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End footer Area -->
+</div>

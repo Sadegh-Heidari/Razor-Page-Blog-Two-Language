@@ -1,0 +1,13 @@
+﻿<div class="section-top-border">
+    <h3>@Resources.ElmentCollectionPage.PictureGallery</h3>
+    <div class="row gallery-item">
+        @for (int i = 1; i <= 8; i++)
+        {
+            <div class="col-md-4">
+                <a href="~/pics/g@(i).jpg" class="img-pop-up">
+                    <div class="single-gallery-image" style="background: url(/pics/g@(i).jpg);"></div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

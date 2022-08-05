@@ -1,0 +1,21 @@
+﻿@using Microsoft.Extensions.Options
+@inject IOptions<RequestLocalizationOptions>? _options
+@{
+    var Options = _options.Value;
+    var supportedCulture = Options.SupportedCultures.ToList();
+    if(Options == null || supportedCulture == null || supportedCulture.Count <=1)
+        return;
+    var CurrentThreed = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
+}
+    <div class="flagg">
+        @foreach (var item in supportedCulture)
+        {
+            var NativeName = item.NativeName[..(item.NativeName.IndexOf('(') - 1)];
+            if (CurrentThreed != item.Name)
+            {
+                <a asp-page="/Change" asp-route-CultureName="@item.Name" class="nav-link text-dark">
+                    @(NativeName)
+                </a>
+            }
+        }
+    </div>

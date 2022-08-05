@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Ripository.DAL.Models.NazarSanjiDTAT> 
+<!-- Start Project Area -->
+    <section class="project-area">
+        <div class="container">
+            @{
+                if (TempData["Delete"] != null)
+                {
+                    <div class="alert alert-danger">
+                        <p class="text-danger text-center">@TempData["Delete"]</p>
+                    </div>
+                }
+                if (TempData["CheckProjeh"] != null)
+                {
+            
+                    <div class="alert alert-danger">
+                        <p class="text-danger text-center">@TempData["CheckProjeh"]</p>
+                    </div>
+           
+                }
+            }
+            <a asp-page="Edit/SabtProjeh" class="btn btn-link btn-primary">@Resources.NavbarButton.CreatContent</a>
+            <div class="row">
+                @{
+                    if (Model.Count() == 0)
+                    {
+                        <h1 class="text text-center text-black m-auto">@Resources.SectionThreeMainPage.NoProject</h1>
+                    }
+                    else
+                    {
+                        foreach (var x in Model)
+                        {
+                            <div class="col-md-4">
+                                <div class="single-project" style="background: url(pics/@x.imagename);">
+                                    <div class="overlay overlay-content">
+                                        <h4>@x.title</h4>
+                                        <p>@x.Description</p>
+                                    </div>
+                                </div>
+                                <a asp-page-handler="CheckProjeh" asp-route-id="@x.ID" class="btn btn-primary mt-2 mb-2 ml-2">@Resources.NavbarButton.UpdateProject</a>
+
+
+                                <a asp-page-handler="Delete" asp-route-id="@x.ID" class="btn btn-danger mt-2 mb-2">@Resources.NavbarButton.DeleteProject</a>
+                            </div>
+
+                        }
+                    }
+                }
+
+            </div>
+        </div>
+    </section>
+    <!-- End Project Area -->
+    

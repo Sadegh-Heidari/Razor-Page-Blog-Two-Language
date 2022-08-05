@@ -1,0 +1,22 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model             Two.Pages.ElementsModel
+@{
+}
+<div class="main-wrapper">
+    <partial name="PartialViews/ElementPagePartial/HeaderElement" />
+    <partial name="PartialViews/ElementPagePartial/SampleArea" />
+    <partial name="PartialViews/ElementPagePartial/ButtonElement" />
+    <!-- Start Align Area -->
+    <div class="white-bg">
+        <div class="container">
+            <partial name="PartialViews/ElementPagePartial/AlignArea" />
+            <partial name="PartialViews/ElementPagePartial/DefinitionsElements" />
+            <partial name="PartialViews/ElementPagePartial/UserComments" />
+            <partial name="PartialViews/ElementPagePartial/CountryElements" for="@Model.countryList"/>
+            <partial name="PartialViews/ElementPagePartial/GalleryElements" />
+            <partial name="PartialViews/ElementPagePartial/FormElements" />
+        </div>
+    </div>
+    <!-- End Align Area -->
+</div>

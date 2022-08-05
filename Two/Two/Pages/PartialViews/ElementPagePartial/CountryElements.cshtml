@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Two.ViewModels.CountryViewModel>
+<div class="section-top-border">
+    <h3 class="mb-30" style="display:flex">@Resources.ElmentCollectionPage.Table</h3>
+    <a class="genric-btn primary radius mb-3" asp-page="/Edit/InsertCountry">@Resources.NavbarButton.CreatCountry</a>
+    <div class="progress-table-wrap">
+        <div class="progress-table">
+            <div class="table-head">
+                <div class="serial">@Resources.ElmentCollectionPage.ID</div>
+                <div class="country">@Resources.ElmentCollectionPage.Countries</div>
+                <div class="visit">@Resources.ElmentCollectionPage.Views</div>
+                <div class="percentage">@Resources.ElmentCollectionPage.Percent</div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="table-row">
+                    <div class="serial">@item.id</div>
+                    <div class="country"> <img src="/pics/@item.imagePath" alt="asd" style="width: 50px;height: 30px">@item.nameCountry</div>
+                    <div class="visit">@item.visit</div>
+                    <div class="percentage">
+                        <div class="progress">
+                            <div class="progress-bar color-1" role="progressbar" style="width: @item.AriaProgress%" aria-valuenow="@item.AriaProgress" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

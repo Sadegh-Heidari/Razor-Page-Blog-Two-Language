@@ -1,0 +1,11 @@
+﻿@page "{id:int?}"
+@model Two.Pages.IndexModel
+@{
+}
+<partial name="PartialViews/IndexPartial/HeaderContent"/>
+<div class="main-wrapper">
+    <partial name="PartialViews/IndexPartial/FutureArea"/>
+    <partial name="PartialViews/IndexPartial/TestimonialArea"/>
+    <partial name="PartialViews/IndexPartial/ProjectArea" for="@Model.Nazar"/>
+   <partial name="PartialViews/IndexPartial/BeginArea"/>
+</div>

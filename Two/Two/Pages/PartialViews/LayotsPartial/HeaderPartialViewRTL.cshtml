@@ -1,0 +1,24 @@
+﻿<div class="main-wrapper-first">
+    <!-- Start Header Menu -->
+    <header>
+        <div class="container">
+            <div class="header-wrap">
+                <div class="header-top d-flex justify-content-between align-items-center">
+                    <div class="main-menubar d-flex align-items-center">
+                        <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                        <nav class="hide">
+                            <a asp-page="/Index">@Resources.NavbarButton.MainPage</a>
+                            <a asp-page="/Elements" >@Resources.NavbarButton.ElementCollectionPage</a>
+                            
+                        </nav>
+                    </div>
+                    <partial name="PartialViews/ChangeLang"/>
+                    <div class="logo">
+                        <a ><img src="~/pics/logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Menu -->
+</div>
