@@ -6,7 +6,6 @@ using RZ_TOW_LANG.BAL.Business;
 
 namespace Two.Pages
 {
-    [Route("home")]
     public class IndexModel : PageModel
     {
         [BindProperty]
