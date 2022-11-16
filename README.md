@@ -3,3 +3,4 @@ ASP.Net Core
 Html css
 Java Script
 Sql server
+Ef Core
